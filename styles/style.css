@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* changing the base size 10px relative to 16px base of most browsers */
+  font-size: 62.5%;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  display: grid;
+  justify-items: center;
+  margin: 0;
+  background: rgb(245, 245, 245);
+  color: rgb(99,99,99);
+}
+
+#container {
+  text-align: center;
+  display: grid;
+  /* font-size: 2rem; */
+  grid-template-columns:  auto;
+  grid-template-rows: auto;
+  padding: 0 10vmin;
+}
+
+#options {
+  /* place-self: center; */
+  border: 1px solid rgb(186, 181, 181);
+}
+
+.selector {
+  border: 1px solid #eeeeee;
+}
+
+label {
+  display: block;
+}
+
+#gameOptions {
+  margin: 2vmin;
+  /* font-size: 1.5rem; */
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: 1fr;
+  place-items: center;
+  column-gap: 5vmin;
+}
+
+.resize-button {
+  width: 15vmin;
+  height: 6vmin;
+}
+
+#stack {
+  font-size: 2rem;
+  padding-left: 20%;
+}
+
+footer {
+  display: block;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: rgb(167, 167, 145);
+}
+
+h1 {
+  font-family: 'Cherry Swash', cursive;
+  font-weight: bolder;
+  font-size: 7.5vw;
+  line-height: 1.3;
+  background: repeating-linear-gradient(45deg, #000000, rgb(167, 167, 145) 2px);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1vmin;
+}
+
+#win {
+  font-size: 15vw;
+  line-height: 1;
+  animation: slide-in 2s;
+  padding-top: 2vmin;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes slide-in {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
+.select {
+  margin: 0;
+  font-size: ;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+button.play {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 2vmin;
+  color: #FFF;
+  background-color:  rgb(79, 79, 77);
+  
+  width: 100%;
+  height: 90%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+div#board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 6em);
+  justify-content: space-evenly;
+  margin: 5vmin 0;
+}
+
+@media screen and (min-width: 768px){
+  div#board {
+    grid-template-columns: repeat(auto-fill, 9em);
+
+  }
+}
+
+.card {
+  border: 1px solid rgb(245, 245, 245);
+  /* padding: 15% 0 0 15%; */
+  margin: 5%;
+  border-radius: 1em;
+  background-color:rgb(252, 252, 252);  
+  box-shadow: 6px 11px 22px 0px rgba(212,212,212,1);
+  
+  -webkit-box-shadow: 6px 11px 22px 0px rgba(212,212,212,1);
+  -moz-box-shadow: 6px 11px 22px 0px rgba(212,212,212,1);
+}
+
+.colorblock {
+  padding: 35%;
+  margin: 15%;
+  outline: 1px solid rgb(212, 212, 212);
+  visibility: hidden;
+}
+
+.card[data-flipped=true] .colorblock {
+  visibility: visible;
+}
+

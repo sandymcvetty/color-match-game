@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Cherry+Swash|Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="./src/jscolor.js"></script>
+
+  <title>Color Match Game</title>
+</head>
+<body>
+  <div id="container">
+  <header>
+  <h1>Color Match Game</h1>
+  
+  <div id="options">
+    <form name="gameOptions" id="gameOptions">
+      <div>
+        <label>Pick Color 1:</label>
+        <button id="color1" name="color1" class="selector jscolor {valueElement:null,value:'rgb(7, 255, 180)'} resize-button" ></button>
+      </div>
+      <div>
+        <label>Pick Color 2:</label>
+        <button id="color2" name="color2" class="selector jscolor {valueElement: null, value: 'rgb(134, 31, 213)'} resize-button" ></button>
+      </div>
+      <div>
+        <label>Number of Cards</label>
+        <select class="resize-button" name="stack" id="stack">          
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
+        </select>
+      </div>
+      <button type="submit" class="play">Play!</button>
+    </form>    
+  </div>
+</header>
+<div id="board"></div>
+<footer><p>Sandy built this game with vanilla js, html, and css, with a little help from <a href="http://jscolor.com/">jscolor</a>. Thanks for playing! </p></footer>
+<script src="./src/game.js"></script>
+</div>
+</body>
+</html>
